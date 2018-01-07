@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack --watch",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "dev-server": "webpack-dev-server",
     "test": "jest "
@@ -19,6 +20,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "extract-text-webpack-plugin": "3.0.0",
     "jest": "20.0.4",
     "live-server": "^1.2.0",
     "moment": "2.18.1",
